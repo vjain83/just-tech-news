@@ -79,6 +79,4 @@ User.init(
     }
 );
 
-// create our User model
-
 module.exports = User;
