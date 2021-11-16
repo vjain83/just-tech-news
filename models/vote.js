@@ -1,5 +1,4 @@
 const { Model, DataTypes } = require("sequelize");
-const { INITIALLY_DEFERRED } = require("sequelize/types/lib/deferrable");
 const sequelize = require('../config/connection');
 
 class Vote extends Model { }
@@ -34,7 +33,6 @@ Vote.init({
         freezeTableName: true,
         underscored: true,
         modelName: 'vote'
-    }
-)
+    })
 module.exports = Vote;
 
