@@ -36,12 +36,12 @@ router.delete('/:id', (req, res) => {
             id: req.params.id
         }
     })
-        .then(dbUserData => {
-            if (!dbUserData) {
+        .then(dbCommentData => {
+            if (!dbCommentData) {
                 res.status(404).json({ message: 'No comment found with this id' });
                 return;
             }
-            res.json(dbUserData);
+            res.json(dbCommentData);
         })
         .catch(err => {
             console.log(err);
